@@ -73,6 +73,7 @@
                 $(this).parent().prepend('<span class="vtimeline-date">'+date+'</span>');
             }
         });
+        
 
     });
 
