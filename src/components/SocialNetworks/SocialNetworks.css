@@ -1,0 +1,14 @@
+
+.icons-social a {
+    color: #ecf0f1;
+}
+
+.icons-social a svg path {
+    fill: #ecf0f1;
+} 
+
+.icons-social i {
+    padding: 10px;
+    font-size: 2em;
+}
+  
