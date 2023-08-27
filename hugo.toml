@@ -1,0 +1,77 @@
+baseurl = "https://alexd10s.github.io/"
+title = "Main"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+disqusShortname = "alexbean"
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Alex Bean"
+  info = "Software Engineer | Blockchain Developer | Master's Graduate"
+  description = "Software Engineer | Blockchain Developer | Master's Graduate"
+  keywords = "blockchain,polkadot,web3"
+  avatarurl = "images/avatar.jpeg"
+
+  faviconSVG = "/img/favicon.svg"
+  favicon_32 = "/img/favicon-32x32.png"
+
+
+  since = 2023
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/AlexD10S"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa fa-twitter fa-2x"
+  weight = 2
+  url = "https://twitter.com/Bean_D10S"
+[[params.social]]
+  name = "StackExchange"
+  icon = "fa fa-stack-overflow fa-2x"
+  weight = 3
+  url = "https://substrate.stackexchange.com/users/2762/alex-bean"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin fa-2x"
+  weight = 4
+  url = "https://linkedin.com/in/alejandrobeancasas"
+
+
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+[[menu.main]]
+  name = "Talks"
+  weight = 1
+  url  = "talks/"
+# [[menu.main]]
+#   name = "About"
+#   weight = 2
+#   url = "about/"
