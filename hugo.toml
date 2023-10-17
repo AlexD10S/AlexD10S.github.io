@@ -71,7 +71,7 @@ style = "github-dark"
   name = "Talks"
   weight = 1
   url  = "talks/"
-# [[menu.main]]
-#   name = "About"
-#   weight = 2
-#   url = "about/"
+[[menu.main]]
+  name = "About"
+  weight = 1
+  url = "about/"
