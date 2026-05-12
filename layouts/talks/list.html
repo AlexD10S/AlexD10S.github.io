@@ -1,0 +1,37 @@
+{{ define "title" }}Talks · {{ .Site.Title }}{{ end }}
+{{ define "content" }}
+<section class="container list">
+  <header>
+    <h1 class="title">
+      <a class="title-link" href="{{ .Permalink | safeURL }}">Talks</a>
+    </h1>
+  </header>
+
+  <div class="talks-legend">
+    <span class="tl-item"><span class="tbadge mentor"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>Mentor</span>
+    <span class="tl-item"><span class="tbadge workshop"><i class="fa fa-laptop" aria-hidden="true"></i></span>Workshop</span>
+    <span class="tl-item"><span class="tbadge interview"><i class="fa fa-microphone" aria-hidden="true"></i></span>Interview</span>
+  </div>
+
+  {{ $paginator := .Paginate (.Pages.ByDate.Reverse) }}
+  <ul class="talks-list">
+    {{ range $paginator.Pages }}
+    {{ $type := .Params.type | default "workshop" }}
+    <li class="talk-item">
+      <span class="tbadge {{ $type }}">
+        {{ if eq $type "mentor"    }}<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        {{ else if eq $type "interview" }}<i class="fa fa-microphone" aria-hidden="true"></i>
+        {{ else }}<i class="fa fa-laptop" aria-hidden="true"></i>
+        {{ end }}
+      </span>
+      <a class="talk-title" href="{{ .Params.externalLink | default .RelPermalink }}" target="_blank" rel="noopener noreferrer">
+        {{- .Title -}}{{ with .Params.flag }}&nbsp;{{ . }}{{ end }}
+      </a>
+      <span class="talk-date">{{ .Date | time.Format "Jan 2006" }}</span>
+    </li>
+    {{ end }}
+  </ul>
+
+  {{ partial "pagination.html" $paginator }}
+</section>
+{{ end }}

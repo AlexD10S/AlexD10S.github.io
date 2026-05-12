@@ -1,10 +1,11 @@
 baseurl = "https://alexd10s.github.io/"
-title = "Main"
+title = "Alex Bean"
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
-paginate = 20
+[pagination]
+  pagerSize = 20
 
 disqusShortname = "alexbean"
 
@@ -13,10 +14,11 @@ style = "github-dark"
 
 [params]
   author = "Alex Bean"
-  info = "Software Engineer | Blockchain Developer | Master's Graduate"
-  description = "Software Engineer | Blockchain Developer | Master's Graduate"
-  keywords = "blockchain,polkadot,web3"
-  avatarurl = "images/avatar.jpeg"
+  info = "Software Engineer · Founder · Blockchain Systems · Private AI"
+  description = "Senior software engineer and co-founder. Background in AI agents, blockchain infrastructure, decentralized identity, and developer tooling."
+  keywords = "software-engineer,rust,ai-agents,blockchain,developer-tools,open-source,web3,identity,co-founder"
+  bio = "Co-founder of [R0GUE](https://r0gue.io), building AI systems, developer infrastructure, and secure execution platforms. Background in Rust, blockchain, decentralized identity, and full-stack product delivery."
+  avatarurl = "images/avatar.png"
 
   faviconSVG = "/img/favicon.svg"
   favicon_32 = "/img/favicon-32x32.png"
@@ -29,7 +31,7 @@ style = "github-dark"
   colorScheme = "auto"
   hidecolorschemetoggle = false
 
-  # customCSS = ["css/custom.css"]
+  customCSS = ["css/custom.css"]
   # customSCSS = ["scss/custom.scss"]
   # customJS = ["js/custom.js"]
 
@@ -64,9 +66,9 @@ style = "github-dark"
 
 # Menu links
 [[menu.main]]
-  name = "Blog"
+  name = "Projects"
   weight = 1
-  url  = "posts/"
+  url  = "projects/"
 [[menu.main]]
   name = "Talks"
   weight = 1

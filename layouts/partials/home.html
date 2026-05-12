@@ -2,31 +2,28 @@
   <div class="about">
     {{ if and (isset .Site.Params "avatarurl") (not (isset .Site.Params "gravatar")) }}
       {{ with .Site.Params.avatarURL }}
-        <div class="avatar"><img src="{{ . | relURL }}" alt="avatar"></div>
+        <div class="hero-av-ring">
+          <img src="{{ . | relURL }}" alt="{{ $.Site.Params.author }}" class="hero-av">
+        </div>
       {{ end }}
     {{ end }}
-    {{ with .Site.Params.gravatar }}
-      <div class="avatar"><img src="https://www.gravatar.com/avatar/{{md5 .}}?s=240&d=mp" alt="gravatar"></div>
+
+    <h1 class="hero-name">{{ .Site.Params.author }}</h1>
+    <p class="hero-tagline">{{ .Site.Params.info }}</p>
+
+    {{ with .Site.Params.bio }}
+    <div class="hero-bio">{{ . | markdownify }}</div>
     {{ end }}
-    <h1>{{ .Site.Params.author }}</h1>
-    {{ if reflect.IsSlice .Site.Params.info }}
-    <h2>{{ range .Site.Params.info }}{{.}}<br>{{ end}}</h2>
-    {{ else }}
-    <h2>{{ .Site.Params.info }}</h2>
-    {{ end }}
+
     {{ with .Site.Params.social }}
-    <ul>
+    <ul class="hero-social">
       {{ range sort . "weight" }}
         {{ if .icon }}
-          <li>
-            <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
-              <i class="{{ .icon }}" aria-hidden="true"></i>
-            </a>
-          </li>
-        {{ else }}
-          <li>
-            <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }}>{{ .name }}</a>
-          </li>
+        <li>
+          <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" target="_blank" rel="noopener">
+            <i class="{{ .icon }}" aria-hidden="true"></i>
+          </a>
+        </li>
         {{ end }}
       {{ end }}
     </ul>

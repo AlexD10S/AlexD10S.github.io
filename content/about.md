@@ -5,12 +5,12 @@ layout: "About"
 description: "About"
 ---
 
-I'm **Alex Bean**, a Software Engineer originally from Spain but in the last year I have lived in Barcelona, Dublin and Brussels. 
+I'm **Alex Bean**, a software engineer and co-founder building AI systems and developer infrastructure.
 
-My main focus on **Blockchain**, more specifically **Polkadot** where I have been contributing the last year with [code](https://github.com/paritytech/polkadot-sdk/commits/master?author=alexd10s), [examples](https://github.com/AlexD10S/substrate-betting), [dapps](https://github.com/SubstrateChess/chess-substrate-dapp), [technical support](https://substrate.stackexchange.com/users/2762/alex-bean) ... 
-I like to code using Rust and Typescript, and write Smart Contracts with ink! and Solidity.
-I love to learn new stuff, especially last trendings in the Polkadot ecosystem or other concepts like **Zero-Knowledge Proofs (ZKP)**, **Self-Sovereign Identity (SSI)**, **NFTs**...
+I co-founded [R0GUE](https://r0gue.io), an engineering company working at the intersection of AI, blockchain, and secure systems. My work spans AI agent systems, developer infrastructure, private AI platforms, and open-source tooling.
 
-I completed my Master’s degree in Blockchain Technologies from [Polytechnic University of Catalonia (UPC)](https://www.upc.edu/en) on October 2021. I have been working as a full stack developer in different startups in the Blockchain ecosystem since 2017-2018. Currently, I am working full-time as a **Support Polkadot Engineer** at [Parity](https://www.parity.io/).
+I was at [Parity Technologies](https://www.parity.io/) for two years, supporting teams building on Polkadot and building tooling, proof-of-concepts, and technical content in Rust and TypeScript. That also included running workshops and mentoring at hackathons across Europe and Latin America. Before that, three years at [Validated ID](https://www.validatedid.com/) working on VIDchain, one of Europe's early SSI and Verifiable Credentials platforms, including a mobile wallet for Android and iOS. My career started at [GIRT Mobile](https://www.girtmobile.com) in Galway (Ireland), building production software for financial organizations.
 
-The last year I have participate in different Hackathons as a mentor in the [ETH Dublin Hackthon](https://www.ethdublin.io/), as a judge in the [Polkadot Hackathon LATAM](https://polkadothackathonlatam.com/#jueces) and having talks and workshops in the [Polkadot Metaverse](https://metaversechampionship.gg/) and the [ETH Rome Hackathon](https://lu.ma/p3v87fab).
+I have a Master's in Blockchain Technologies from the [Polytechnic University of Catalonia (UPC)](https://www.upc.edu/en) and a Computer Science degree from the University of Zaragoza.
+
+Reach me on [LinkedIn](https://linkedin.com/in/alejandrobeancasas) or [GitHub](https://github.com/AlexD10S).

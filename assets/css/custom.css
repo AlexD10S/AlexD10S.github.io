@@ -1,0 +1,337 @@
+/* ── Design tokens ── */
+:root {
+  --accent:            #E6007A;
+  --accent2:           #6D28D9;
+  --card-border:       rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: rgba(0, 0, 0, 0.08);
+  --tag-bg:            rgba(230, 0, 122, 0.08);
+  --page-bg:           #fafafa;
+}
+
+body.colorscheme-dark {
+  --card-border:       rgba(255, 255, 255, 0.1);
+  --card-shadow-hover: rgba(0, 0, 0, 0.45);
+  --tag-bg:            rgba(230, 0, 122, 0.18);
+  --page-bg:           #212121;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto {
+    --card-border:       rgba(255, 255, 255, 0.1);
+    --card-shadow-hover: rgba(0, 0, 0, 0.45);
+    --tag-bg:            rgba(230, 0, 122, 0.18);
+    --page-bg:           #212121;
+  }
+}
+
+/* ── Hero breathing room ── */
+.centered {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+/* ── Hero avatar ── */
+.hero-av-ring {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  margin: 0 auto 2.4rem;
+  display: block;
+  box-shadow: 0 4px 24px rgba(230, 0, 122, 0.18);
+}
+
+.hero-av {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid var(--page-bg);
+}
+
+/* ── Hero name ── */
+.hero-name {
+  font-size: 5.2rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.4rem !important;
+  line-height: 1.1 !important;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
+@media (max-width: 768px) {
+  .hero-name { font-size: 4rem !important; }
+}
+
+/* ── Hero tagline ── */
+.hero-tagline {
+  font-size: 1.45rem;
+  letter-spacing: 0.08em;
+  opacity: 0.45;
+  margin: 0 0 2.2rem;
+  text-transform: uppercase;
+}
+
+/* ── Hero bio ── */
+.hero-bio,
+.hero-bio p {
+  font-size: 1.75rem;
+  line-height: 1.8;
+  max-width: 54rem;
+  margin: 0 auto 2.8rem;
+  opacity: 0.82;
+  text-align: center;
+}
+
+.hero-bio a {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(230, 0, 122, 0.3);
+  transition: border-color 0.2s ease-out;
+}
+
+.hero-bio a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ── Hero social ── */
+.hero-social {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-social li a {
+  font-size: 2.4rem;
+  opacity: 0.45;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, color 0.2s ease-out;
+  text-decoration: none;
+}
+
+.hero-social li a:hover {
+  opacity: 1;
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* ── Navigation ── */
+.navigation-title {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.navigation-link {
+  display: inline-block !important;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.navigation-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+  transition: left 0.22s ease-out, right 0.22s ease-out;
+}
+
+.navigation-link:hover::after {
+  left: 0;
+  right: 0;
+}
+
+/* ── Projects grid page ── */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 3.2rem 0;
+}
+
+@media (max-width: 640px) {
+  .proj-grid { grid-template-columns: 1fr; }
+}
+
+.proj-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.6rem;
+  border: 1px solid var(--card-border);
+  border-radius: 1.6rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.22s ease-out, box-shadow 0.22s ease-out, border-color 0.22s ease-out;
+}
+
+.proj-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 8px 24px rgba(230, 0, 122, 0.12),
+    0 20px 48px var(--card-shadow-hover);
+  border-color: var(--accent);
+  color: inherit;
+}
+
+.proj-card-body {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.proj-card-name {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.8rem;
+  transition: color 0.2s ease-out;
+}
+
+.proj-card:hover .proj-card-name {
+  color: var(--accent);
+}
+
+.proj-card-desc {
+  font-size: 1.5rem;
+  line-height: 1.65;
+  opacity: 0.68;
+  margin: 0;
+}
+
+.proj-card-foot {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.3rem;
+  font-family: monospace;
+  opacity: 0.4;
+  transition: opacity 0.2s ease-out;
+}
+
+.proj-card:hover .proj-card-foot {
+  opacity: 0.8;
+}
+
+.proj-card-foot i {
+  font-size: 1.5rem;
+}
+
+.proj-card-arr {
+  margin-left: auto;
+  font-size: 1.5rem;
+  font-family: inherit;
+  opacity: 0.35;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.proj-card:hover .proj-card-arr {
+  opacity: 1;
+  transform: translate(3px, -3px);
+}
+
+/* ── Talks list ── */
+.talks-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  margin: 2.4rem 0 3.2rem;
+  padding: 1.4rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  font-size: 1.35rem;
+}
+
+.tl-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  opacity: 0.65;
+}
+
+.tbadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.7rem;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.tbadge.mentor    { background: rgba(245, 158,  11, 0.12); color: #D97706; }
+.tbadge.workshop  { background: rgba( 59, 130, 246, 0.12); color: #2563EB; }
+.tbadge.interview { background: rgba(239,  68,  68, 0.12); color: #DC2626; }
+
+body.colorscheme-dark .tbadge.mentor    { background: rgba(245, 158,  11, 0.2); }
+body.colorscheme-dark .tbadge.workshop  { background: rgba( 59, 130, 246, 0.2); }
+body.colorscheme-dark .tbadge.interview { background: rgba(239,  68,  68, 0.2); }
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .tbadge.mentor    { background: rgba(245, 158,  11, 0.2); }
+  body.colorscheme-auto .tbadge.workshop  { background: rgba( 59, 130, 246, 0.2); }
+  body.colorscheme-auto .tbadge.interview { background: rgba(239,  68,  68, 0.2); }
+}
+
+.talks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talk-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.talk-item:last-child { border-bottom: none; }
+
+.talk-title {
+  flex: 1;
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.18s ease-out;
+  line-height: 1.4;
+}
+
+.talk-title:hover { color: var(--accent); }
+
+.talk-date {
+  font-size: 1.3rem;
+  opacity: 0.38;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Hero staggered fade-in ── */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes heroFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
+
+  .hero-av-ring { animation: heroFade 0.5s ease-out both; }
+  .hero-name    { animation: heroFade 0.5s 0.08s ease-out both; }
+  .hero-tagline { animation: heroFade 0.5s 0.14s ease-out both; }
+  .hero-bio     { animation: heroFade 0.5s 0.20s ease-out both; }
+  .hero-social  { animation: heroFade 0.5s 0.26s ease-out both; }
+}

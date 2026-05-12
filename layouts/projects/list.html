@@ -1,0 +1,31 @@
+{{ define "title" }}Projects · {{ .Site.Title }}{{ end }}
+{{ define "content" }}
+<section class="container list">
+  <header>
+    <h1 class="title">
+      <a class="title-link" href="{{ .Permalink | safeURL }}">Projects</a>
+    </h1>
+  </header>
+  <div class="proj-grid">
+    {{ range .Paginator.Pages }}
+    <a class="proj-card" href="{{ .Params.externalLink | default .RelPermalink }}"{{ if .Params.externalLink }} target="_blank" rel="noopener noreferrer"{{ end }}>
+      <div class="proj-card-body">
+        <span class="proj-card-name">{{ .Title }}</span>
+        <p class="proj-card-desc">{{ .Description }}</p>
+      </div>
+      <div class="proj-card-foot">
+        {{ if .Params.github }}
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <span>{{ .Params.github }}</span>
+        {{ else }}
+          <i class="fa fa-external-link" aria-hidden="true"></i>
+          <span>View project</span>
+        {{ end }}
+        <span class="proj-card-arr">↗</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}
